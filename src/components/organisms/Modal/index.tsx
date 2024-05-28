@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 
-const Modal: React.FC<{ isOpen: boolean; onClose: () => void, children: React.ReactNode, size: string }> = ({ isOpen, onClose, children, size }) => {
+const Modal: React.FC<{ isOpen: boolean; onClose: () => void, children: React.ReactNode, size: string }> = ({ isOpen, children }) => {
     const [modalOpen, setModalOpen] = useState(isOpen);
 
     useEffect(() => {
         setModalOpen(isOpen)
     }, [isOpen]);
 
-    const handleClose = () => {
-        setModalOpen(!isOpen);
-        onClose();
-    };
+    // const handleClose = () => {
+    //     setModalOpen(!isOpen);
+    //     onClose();
+    // };
 
   return (
     <>
