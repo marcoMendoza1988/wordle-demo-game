@@ -136,7 +136,7 @@ const Gameboard = () => {
     useEffect(() => {
         const fetchFileContent = async () => {
           try {
-            const response = await fetch('/words.txt');
+            const response = await fetch('/wordle-demo-game/words.txt');
             if (!response.ok) {
               throw new Error('Network response was not ok');
             }
